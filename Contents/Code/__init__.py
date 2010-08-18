@@ -1,5 +1,3 @@
-from PMS.Objects import *
-from PMS.Shortcuts import *
 import re
 
 ####################################################################################################
@@ -29,7 +27,7 @@ def MainMenu():
 
   dir = MediaContainer()
 
-  page = XML.ElementFromURL(PROATCOOKING_RSS_URL, isHTML=False, cacheTime=CACHE_INTERVAL)
+  page = XML.ElementFromURL(PROATCOOKING_RSS_URL, cacheTime=CACHE_INTERVAL)
 
   episodes = page.xpath("//channel/item")
 
