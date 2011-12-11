@@ -2,13 +2,12 @@ import re
 
 ####################################################################################################
 
-PROATCOOKING_PREFIX                  = "/video/proatcooking"
-PROATCOOKING_URL                     = "http://www.proatcooking.com/"
-PROATCOOKING_RSS_URL                 = "http://proatcooking.blip.tv/rss"
-MEDIA_NAMESPACE                      = {'media':'http://search.yahoo.com/mrss/'}
-BLIP_NAMESPACE                       = {'blip':'http://blip.tv/dtd/blip/1.0'}
-DEBUG_XML_RESPONSE		     = False
-CACHE_INTERVAL                       = 3200
+PROATCOOKING_PREFIX  = "/video/proatcooking"
+PROATCOOKING_URL     = "http://www.proatcooking.com/"
+PROATCOOKING_RSS_URL = "http://proatcooking.blip.tv/rss"
+MEDIA_NAMESPACE      = {'media':'http://search.yahoo.com/mrss/'}
+BLIP_NAMESPACE       = {'blip':'http://blip.tv/dtd/blip/1.0'}
+DEBUG_XML_RESPONSE   = False
 
 ####################################################################################################
 
@@ -27,7 +26,7 @@ def MainMenu():
 
   dir = MediaContainer()
 
-  page = XML.ElementFromURL(PROATCOOKING_RSS_URL, cacheTime=CACHE_INTERVAL)
+  page = XML.ElementFromURL(PROATCOOKING_RSS_URL, cacheTime=CACHE_1HOUR)
 
   episodes = page.xpath("//channel/item")
 
@@ -83,5 +82,3 @@ def TidyString(stringToTidy):
       return stringSearch.group(1)
   else:
     return ''
-
-

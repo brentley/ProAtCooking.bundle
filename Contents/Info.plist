@@ -26,14 +26,8 @@
 	<array>
 		<string>FLV</string>
 	</array>
-	<key>PlexPluginDebug</key>
-	<string>1</string>
 	<key>PlexPluginMode</key>
 	<string>AlwaysOn</string>
-	<key>PlexPluginPrefixes</key>
-	<array>
-		<string>/video/proatcooking</string>
-	</array>
 	<key>PlexVideoCodec</key>
 	<array>
 		<string>H.263</string>
